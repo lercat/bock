@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class ProfilsController extends Controller
 {
@@ -30,7 +31,18 @@ class ProfilsController extends Controller
             'image' => ''
         ]);
 
-        auth()->user()->profil->update($data);
+
+        if(request('image')) {
+            $imagePath = request('image')->store('profil', 'public');
+
+            $image = Image::make(public_path("storage/{$imagePath}"))->fit(1000, 1000);
+            $image->save();
+        }
+        
+        auth()->user()->profil->update(array_merge(
+            $data,
+            ['image' => $imagePath]
+        ));
 
         return redirect("/profil/{$user->id}");
     }

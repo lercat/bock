@@ -5,12 +5,14 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5">
-            <img src="../assets/img/cheers.jpg" class="rounded-circle" alt="tchintchin">
+            <img src="/storage/{{ $user->profil->image }}" class="rounded-circle w-100" alt="tchintchin">
         </div>
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline"> 
                 <h2>{{ $user->username }}</h2> 
+                @can('update', $user->profil)
                 <a href="/p/create">Ajouter un nouveau Post</a>
+                @endcan
             </div>
         
             @can('update', $user->profil)

@@ -8,8 +8,23 @@
         </div>
         <div class="col-4">
             <div>
-                <h3>{{ $post->user->username }}</h3>
-                <h4>{{ $post->legende }}</h4>
+                <div class="d-flex align-items-center">
+                    <div class="pr-3">
+                        <img src="/storage/{{ $post->user->profil->image }}" class=" rounded-circle w-100" style="max-width: 50px">
+                    </div>
+                    <div>
+                        <div class="font-weight-bold">
+                            <a href="/profil/{{ $post->user->id }}">
+                                <span class="text-dark">{{ $post->user->username }}</span>
+                            </a>
+                            <img src="../assets/img/coeur.png" alt="" class="pl-3">
+                            <a href="#" class="pl-3">Follow</a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <p> <span class="font-weight-bold mr-3"><a href="/profil/{{ $post->user->id }}"><span class="text-dark">{{ $post->user->username }}</span></a></span>{{ $post->legende }}</p>
                 <p>{{ $post->description }}</p>
             </div>
         </div>
