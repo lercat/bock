@@ -4,13 +4,14 @@
 <div class="container">
     <div class="row">
         <div class="col-8">
-            <img src="/storage/{{ $post->image }}" class="w-100">
+            <img src="/storage/{{ $post->image }}" class="w-75"> <!--modif à 75 -->
         </div>
         <div class="col-4">
             <div>
                 <div class="d-flex align-items-center">
                     <div class="pr-3">
-                        <img src="/storage/{{ $post->user->profil->image }}" class=" rounded-circle w-100" style="max-width: 50px">
+                        <!-- ici on aura toujours une img soit la N/A du model Profil soit une imgreelle-->
+                        <img src="{{ $post->user->profil->profilImage() }}" class=" rounded-circle w-100" style="max-width: 50px">
                     </div>
                     <div>
                         <div class="font-weight-bold">
@@ -27,8 +28,16 @@
                 <p> <span class="font-weight-bold mr-3"><a href="/profil/{{ $post->user->id }}"><span class="text-dark">{{ $post->user->username }}</span></a></span>{{ $post->legende }}</p>
                 <p>{{ $post->description }}</p>
             </div>
+            <div class="row pt-5">
+                <form action="/p/{{ $post->id }}" method="post" class="ml-3">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Supprimer</button>
+                </form>
+            </div>
         </div>
     </div>
+
 </div>
 
 @endsection

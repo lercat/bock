@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/p/create', 'PostsController@create');
 Route::post('/p', 'PostsController@store');
 Route::get('/p/{post}', 'PostsController@show');
-
+Route::delete('/p/{post}', 'PostsController@destroy');//rajout ici
 //profils
 Route::get('/profil/{user}', 'ProfilsController@index')->name('profil.show');
 Route::get('/profil/{user}/edit', 'ProfilsController@edit')->name('profil.edit');

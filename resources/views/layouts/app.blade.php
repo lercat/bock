@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/monstyle.css">
+    <link rel="stylesheet" href="../assets/css/monstyle.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>

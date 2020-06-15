@@ -12,6 +12,11 @@ class Profil extends Model
     // {
     //     return $query->where('status', 1)->get();
     // }
+    public function profilImage()
+    {
+        $imagePath = ($this->image) ? $this->image : 'profil/FBftYWupSsVbLmd1BdNSjcT7sfeIItRrMiqR2FBj.png';
+        return '/storage/' . $imagePath;
+    }
 
     public function user()
     {
