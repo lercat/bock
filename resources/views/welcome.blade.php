@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="container">
-    <div>
+    <div class="text-center pb-3">
         <h1>Beers O'Clock</h1> 
     </div>
     <div>
-        <img src="../../assets/img/tictac.jpg" alt="">
+        <img src="../../assets/img/tictac.jpg"  width="955" height="427" alt="">
     </div>
-    <div>
+    <div class="text-center py-3">
         <h2>Quoi de mieux qu'une petite mousse pour se détendre</h2>
     </div>
 

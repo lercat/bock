@@ -46,6 +46,6 @@ class ProfilsController extends Controller
             $imageArray ?? []
         ));
 
-        return redirect("/profil/{$user->id}");
+        return back;
     }
 }
