@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-8">
-            <img src="/storage/{{ $post->image }}" class="w-75"> <!--modif à 75 -->
+            <img src="/storage/{{ $post->image }}" class="w-75">
         </div>
         <div class="col-4">
             <div>
@@ -29,11 +29,17 @@
                 <p>{{ $post->description }}</p>
             </div>
             <div class="row pt-5">
-                <form action="/p/{{ $post->id }}" method="post" class="ml-3">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Supprimer</button>
-                </form>
+                <div class="d-flex flex-column flex-sm-row">
+                   
+                        <a href="/p/{{ $post->id }}/edit" class="btn btn-outline-dark py-2 px-3">Modifier</a>
+
+                
+                    <form action="/p/{{ $post->id }}" method="post" class="ml-3">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-outline-danger py-2">Supprimer</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
