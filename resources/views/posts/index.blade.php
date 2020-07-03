@@ -26,7 +26,10 @@
         </div>
     </div>
 @endforeach
-<div class="card-header"> <a href="http://localhost/bock/posts.create/">Par ici</a></div>
+<div class="card-header"> 
+    <a href="#">Par ici</a>
+    <p>trouver si profil sans aucun post à mettre le bon lien</p>
+</div>
 
 </div>
 
