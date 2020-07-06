@@ -35,21 +35,8 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    {{-- <ul class="navbar-nav mr-auto">
-                   
-                          <li class="nav-item">
-                            <a class="nav-link" href="a-propos">À propos</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="contact">Contactez-nous</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="unpost">Card</a>
-                            </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="profils">Voir les profils</a>
-                            </li>
-                    </ul> --}}
+                   <!-- <a class="nav-link pt-3" href="profil.show">Mon blog</a>-->
+                    
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -70,6 +57,8 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <!--rajout lien pour revenir sur profil-->
+                                    <a href="{{ route('profil.show', auth()->id()) }}" class="dropdown-item ">Retour sur mon profil</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

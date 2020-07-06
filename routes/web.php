@@ -23,8 +23,8 @@ Route::get('/p', 'PostsController@index');
 Route::get('/p/create', 'PostsController@create');
 Route::get('/p/{post}', 'PostsController@show');
 Route::get('/p/{post}/edit', 'PostsController@edit');
-Route::patch('/p/{post}', 'PostsController@update');
-Route::delete('/p/{post}', 'PostsController@destroy');//rajout ici
+Route::patch('/p/{post}', 'PostsController@update');//fonctionne mais tout le monde peut modifier à revoir
+Route::delete('/p/{post}', 'PostsController@destroy');
 Route::post('/p', 'PostsController@store');
 
 //profils
