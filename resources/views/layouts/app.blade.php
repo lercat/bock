@@ -9,8 +9,7 @@
 
     <title>{{ config('app.name', 'BeersOClock') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- Scripts  décalage du script js en fin de page -->
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -80,5 +79,8 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- Scripts  décalage du script js ici -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>
